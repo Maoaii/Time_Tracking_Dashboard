@@ -1,80 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
+  <link rel="stylesheet" href="css/styles.css">
+
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+
   <title>Frontend Mentor | Time tracking dashboard</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
+  <div class="profile-container">
+    <div class="person">
+      <img class="jeremy-image" src="images/image-jeremy.png" alt="jeremy's image">
 
-  Report for
-  Jeremy Robson
+      <div class="report-from">
+        <p>Report for</p>
 
-  Daily
-  Weekly
-  Monthly
+        <h1>Jeremy Robson</h1>
+      </div>
+    </div>
 
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
+    <div class="profile-buttons">
+      <a href="#">Daily</a> <br>
+      <a href="#">Weekly</a> <br>
+      <a href="#">Monthly</a> <br>
+    </div>
 
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
+  </div>
 
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
+  <div class="card-container">
+    <div class="card-background work">
+      <img class="activity-icon" src="images/icon-work.svg" alt="work-icon">
+    </div>
 
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
+    <div class="card-info">
+      <div class="card-header">
+        <p>Work</p>
+      </div>
 
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
+      <div class="three-dots">
+        <p>...</p>
+      </div>
+      
+      <!-- daily -->
+      <div class="hours">
+        <h1>5hrs</h1>
+      </div>
 
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
+      <div class="previous-hours">
+        Yesterday - 7hrs
+      </div>
 
-  
+    </div>
+  </div>
+
+  <div class="card-container">
+    <div class="card-background play">
+      <img class="activity-icon" src="images/icon-play.svg" alt="work-icon">
+    </div>
+
+    <div class="card-info">
+      <div class="card-header">
+        <p>Play</p>
+      </div>
+
+      <div class="three-dots">
+        <p>...</p>
+      </div>
+      
+      <!-- daily -->
+      <div class="hours">
+        <h1>1hr</h1>
+      </div>
+
+      <div class="previous-hours">
+        Yesterday - 2hrs
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="card-container">
+    <div class="card-background study">
+      <img class="activity-icon" src="images/icon-study.svg" alt="work-icon">
+    </div>
+
+    <div class="card-info">
+      <div class="card-header">
+        <p>Study</p>
+      </div>
+
+      <div class="three-dots">
+        <p>...</p>
+      </div>
+      
+      <!-- daily -->
+      <div class="hours">
+        <h1>0hr</h1>
+      </div>
+
+      <div class="previous-hours">
+        Yesterday - 1hrs
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="card-container">
+    <div class="card-background exercise">
+      <img class="activity-icon" src="images/icon-exercise.svg" alt="work-icon">
+    </div>
+
+    <div class="card-info">
+      <div class="card-header">
+        <p>Exercise</p>
+      </div>
+
+      <div class="three-dots">
+        <p>...</p>
+      </div>
+      
+      <!-- daily -->
+      <div class="hours">
+        <h1>1hr</h1>
+      </div>
+
+      <div class="previous-hours">
+        Yesterday - 1hrs
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="card-container">
+    <div class="card-background social">
+      <img class="activity-icon" src="images/icon-social.svg" alt="work-icon">
+    </div>
+
+    <div class="card-info">
+      <div class="card-header">
+        <p>Social</p>
+      </div>
+
+      <div class="three-dots">
+        <p>...</p>
+      </div>
+      
+      <!-- daily -->
+      <div class="hours">
+        <h1>1hr</h1>
+      </div>
+
+      <div class="previous-hours">
+        Yesterday - 3hrs
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="card-container">
+    <div class="card-background self-care">
+      <img class="activity-icon" src="images/icon-self-care.svg" alt="work-icon">
+    </div>
+
+    <div class="card-info">
+      <div class="card-header">
+        <p>Self Care</p>
+      </div>
+
+      <div class="three-dots">
+        <p>...</p>
+      </div>
+      
+      <!-- daily -->
+      <div class="hours">
+        <h1>0hr</h1>
+      </div>
+
+      <div class="previous-hours">
+        Yesterday - 1hrs
+      </div>
+    </div>
+    
+  </div>
+
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://www.linkedin.com/in/lucas-girotto-4530b9233/">Lucas Girotto</a>.
   </div>
 </body>
+
 </html>

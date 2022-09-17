@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Rubik', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-flow: wrap;
+
+  background-color: #0d1222;
+  color: white;
+  position: relative;
+  margin: 0 0 0 10px;
+  padding: 100px 0 0 40px;
+}
+
+.profile-container {
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 20px;
+  width: 240px;
+  height: 480px;
+  padding: 20px;
+  margin: 0 20px;
+}
+
+.person {
+  background-color: hsl(246, 80%, 60%);
+  border-radius: 20px;
+  padding: 30px;
+  margin: 0;
+  margin: -20px -20px 0 -20px;
+}
+
+.person h1 {
+  margin: 0;
+  font-weight: 300;
+}
+
+.person p {
+  margin: 0;
+  font-size: 16px;
+  color: hsl(236, 100%, 87%);
+}
+
+.jeremy-image {
+  width: 40%;
+  border: 3px solid white;
+  border-radius: 50%;
+}
+
+.report-from {
+  margin: 30px 0 60px 0;
+}
+
+.profile-buttons {
+  margin: 20px 0 10px 0;
+  line-height: 2;
+  color: white;
+}
+
+.profile-buttons a {
+  padding: 20px;
+  text-decoration: none;
+  color: hsl(235, 45%, 61%);
+}
+
+.profile-buttons a:hover {
+  color: white;
+}
+
+.card-container {
+  display: flexbox;
+  margin: 0 20px;
+  width: 240px;
+  height: 240px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.card-background {
+  display: flexbox;
+  border-radius: 20px;
+  height: 240px;
+}
+
+.activity-icon {
+  position: absolute;
+  top: 0;
+  right: 15px;
+}
+
+.work {
+  background-color: hsl(15, 100%, 70%);
+}
+
+.play {
+  background-color: hsl(195, 74%, 62%);
+}
+
+.study {
+  background-color: hsl(348, 100%, 68%);
+}
+
+.exercise {
+  background-color: hsl(145, 58%, 55%);
+}
+
+.social {
+  background-color: hsl(264, 64%, 52%);
+}
+
+.self-care {
+  background-color: hsl(43, 84%, 65%);
+}
+
+.card-info {
+  display: flexbox;
+  background-color: hsl(235, 46%, 20%);
+  width: 240px;
+  height: 200px;
+  padding: 25px;
+  border-radius: 20px;
+  position: absolute;
+  bottom: 0;
+}
+
+.card-info:hover {
+  background-color:  hsl(246, 80%, 60%);
+}
+
+.card-header {
+  width: 50%;
+  float: left;
+}
+
+.three-dots {
+  width: 50%;
+  float: right;
+  text-align: right;
+  font-weight: 800;
+  position: relative;
+  top: -5px;
+}
+
+.hours {
+  margin: 40px 0 20px 0;
+}
+
+.hours h1 {
+  font-size: 48px;
+  font-weight: 300px;
+}
+
+.previous-hours {
+  color: hsl(235, 45%, 61%);
+}
