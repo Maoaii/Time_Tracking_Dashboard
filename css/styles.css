@@ -6,58 +6,63 @@
 }
 
 body {
-  display: flex;
-  flex-flow: wrap;
-
   background-color: #0d1222;
   color: white;
   position: relative;
-  margin: 0 0 0 10px;
-  padding: 100px 0 0 40px;
+  margin: auto;
+  padding: 100px 0 0 10px;
+  justify-content: start;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 240px);
+  grid-template-rows: repeat(2, 240px);
+  gap: 40px;
+  padding: 0 50px;
 }
 
 .profile-container {
+  grid-row-start: 1;
+  grid-row-end: 3;
   background-color: hsl(235, 46%, 20%);
   border-radius: 20px;
-  width: 240px;
-  height: 480px;
-  padding: 20px;
-  margin: 0 20px;
+  width: 260px;
+  height: 520px;
+  padding: 10px;
 }
 
 .person {
   background-color: hsl(246, 80%, 60%);
   border-radius: 20px;
-  padding: 30px;
-  margin: 0;
-  margin: -20px -20px 0 -20px;
+  padding: 30px 30px 60px 30px;
+  margin: -10px -10px 0 -10px;
+  position: relative;
 }
 
 .person h1 {
-  margin: 0;
   font-weight: 300;
+  font-size: 44px;
 }
 
 .person p {
-  margin: 0;
   font-size: 16px;
   color: hsl(236, 100%, 87%);
 }
 
 .jeremy-image {
-  width: 40%;
+  width: 35%;
   border: 3px solid white;
   border-radius: 50%;
 }
 
 .report-from {
-  margin: 30px 0 60px 0;
+  margin: 50px 0 20px 0;
 }
 
 .profile-buttons {
-  margin: 20px 0 10px 0;
   line-height: 2;
-  color: white;
+  white-space: pre-line;
 }
 
 .profile-buttons a {
@@ -71,24 +76,23 @@ body {
 }
 
 .card-container {
-  display: flexbox;
-  margin: 0 20px;
-  width: 240px;
-  height: 240px;
+  width: 260px;
+  height: fit-content;
   border-radius: 20px;
   position: relative;
+  overflow: hidden;
 }
 
 .card-background {
-  display: flexbox;
   border-radius: 20px;
-  height: 240px;
+  height: 230px;
 }
 
 .activity-icon {
   position: absolute;
-  top: 0;
+  top: -12px;
   right: 15px;
+  width: 30%;
 }
 
 .work {
@@ -116,10 +120,9 @@ body {
 }
 
 .card-info {
-  display: flexbox;
   background-color: hsl(235, 46%, 20%);
-  width: 240px;
-  height: 200px;
+  width: 260px;
+  height: 190px;
   padding: 25px;
   border-radius: 20px;
   position: absolute;
@@ -128,6 +131,7 @@ body {
 
 .card-info:hover {
   background-color:  hsl(246, 80%, 60%);
+  cursor: pointer;
 }
 
 .card-header {
@@ -154,5 +158,115 @@ body {
 }
 
 .previous-hours {
-  color: hsl(235, 45%, 61%);
+  color: hsl(236, 100%, 87%);
+}
+
+.attribution {
+  margin-top: 30px;
+  text-align: center;
+}
+
+/*
+  Media query for mobile devices
+*/
+@media screen and (max-width: 1000px) {
+
+  .wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: minmax(200px, auto);
+    justify-content: center;
+    justify-items: center;
+    gap: 20px;
+    padding: 0;
+  }
+
+  .profile-container {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    height: fit-content;
+    width: 350px;
+  }
+
+  .person {
+    height: 150px;
+    padding-top: 40px;
+    padding-bottom: 0;
+  }
+
+  .jeremy-image {
+    width: 25%;
+  }
+
+  .report-from {
+    margin: 0;
+    position: relative;
+    left: 90px;
+    bottom: 65px;
+  }
+
+  .report-from p {
+    font-size: 14px;
+  }
+
+  .report-from h1 {
+    font-size: 26px;
+    white-space: nowrap;
+  }
+
+  .profile-buttons {
+    margin: 20px 0 10px 0;
+    white-space: nowrap;
+    text-align: center;
+  }
+
+  .profile-buttons a {
+    font-size: 20px;
+  }
+
+  .card-container {
+    width: 350px;
+    height: fit-content;
+  }
+
+  .card-background {
+    height: 160px;
+  }
+
+  .activity-icon {
+    width: 23%;
+  }
+
+  .card-info {
+    width: 350px;
+    height: 120px;
+  }
+
+  .card-header p {
+    font-size: 20px;
+  }
+
+  .hours {
+    margin: 0;
+    width: 50%;
+  }
+
+  .hours h1 {
+    font-size: 30px;
+  }
+
+  .three-dots {
+    top: -20px;
+  }
+
+  .three-dots p {
+    font-size: 32px;
+  }
+
+  .previous-hours {
+    width: 50%;
+    float: right;
+    text-align: right;
+    position: relative;
+    top: -25px;
+  }
 }
