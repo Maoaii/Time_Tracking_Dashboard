@@ -29,11 +29,11 @@ Users should be able to:
 
 Desktop view:
 
-<img src="screenshots/desktop-view.png" alt="desktop-view" width="75%"/>
+<img src="screenshots/desktop-view.png" alt="desktop-view" width="85%"/>
 
 Mobile view:
 
-<img src="screenshots/mobile-view-1.png" alt="mobile-view-1" width="25%"/>  |  <img src="screenshots/mobile-view-2.png" alt="mobile-view-2" width="25%"/>
+<img src="screenshots/mobile-view-1.png" alt="mobile-view-1" width="30%"/> <img src="screenshots/mobile-view-2.png" alt="mobile-view-2" width="30%"/>
 
 
 ### Links
@@ -52,10 +52,9 @@ Mobile view:
 
 ### What I learned
 
-I learned quite a bit of CSS Grid usage and how easy it is to make a responsive website with it!
+I learned quite a bit of CSS Grid usage and how easy it is to make a responsive website with it! Check out below the layout for this particular website, simplified of course:
 
-To see how you can add code snippets, see below:
-
+Just a few items with a wrapper that serves as the grid container
 ```html
 <div class="wrapper">
     <div class="tall">
@@ -75,13 +74,21 @@ To see how you can add code snippets, see below:
     </div>
 </div>
 ```
+
+The CSS styling:
 ```css
+/*
+  For the desktop view, there are 4 columns and two rows. Each area is 200px by 200px.
+*/
 .wrapper {
     display: grid;
     grid-template-columns: repeat(4, 200px);
     grid-template-rows: repeat(2, 200px);
 }
 
+/*
+  The tall grid item takes up two areas
+*/
 .tall {
     background-color: red;
     grid-row-start: 1;
@@ -104,6 +111,9 @@ To see how you can add code snippets, see below:
     background-color: yellow;
 }
 
+/*
+  For screen widths smaller than 500px, we display a one column and 6 rows grid. Areas are the same size.
+*/
 @media screen and (max-width: 500px) {
     .wrapper {
         display: grid;
@@ -111,6 +121,9 @@ To see how you can add code snippets, see below:
         grid-template-rows: repeat(6, 200px);
     }
 
+ /*
+   Just for a bit of fun, I shortened the tall grid item to half the size of the other squares
+ */
     .tall {
         background-color: red;
         height: 100px;
@@ -135,6 +148,13 @@ To see how you can add code snippets, see below:
     } 
 }
 ```
+
+- Desktop view:
+  - Now, we can see that in the desktop view, the grid items are layed out side by side, with the exception of the tall one, standing from top to bottom:
+- Mobile view:
+  - When viewing on mobile, the grid items stack on top of eachother. This is all done by just changing the number of columns and rows with a media query!
+
+<img src="screenshots/example-mobile-view.png" alt="example-mobile-view" width="15%"></img> <img src="screenshots/example-desktop-view.png" alt="example-desktop-view" width="80%"></img>
 
 ### Continued development
 
